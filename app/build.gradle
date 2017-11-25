@@ -9,7 +9,16 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
     }
+/*    productFlavors{
+        qihoo {
+            applicationId "com.kimipoker.coolweather.qihoo"
+        }
+        baidu {
+            applicationId "com.kimipoker.coolweather.baidu"
+        }
+    }*/
     buildTypes {
         release {
             minifyEnabled false
