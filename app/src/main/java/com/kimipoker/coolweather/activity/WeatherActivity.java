@@ -1,5 +1,6 @@
 package com.kimipoker.coolweather.activity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -22,6 +23,7 @@ import com.bumptech.glide.Glide;
 import com.kimipoker.coolweather.R;
 import com.kimipoker.coolweather.gson.Forecast;
 import com.kimipoker.coolweather.gson.Weather;
+import com.kimipoker.coolweather.service.AutoUpdateService;
 import com.kimipoker.coolweather.util.HttpUtil;
 import com.kimipoker.coolweather.util.Utility;
 import java.io.IOException;
@@ -209,6 +211,8 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 
     /**
