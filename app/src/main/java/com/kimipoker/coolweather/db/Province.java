@@ -1,10 +1,12 @@
 package com.kimipoker.coolweather.db;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * Created by Kimipoker on 2017/11/25.
  */
 
-public class Province {
+public class Province extends DataSupport {
     private int id;
 
     private String provinceName;
